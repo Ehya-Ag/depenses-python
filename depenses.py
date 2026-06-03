@@ -21,6 +21,7 @@ print("Bienvenue dans mon gestionnaire de dépenses !")
 # else:
 #     print("Choix invalide")
 
+depenses = []
 while True:
     print("1. Ajouter une dépense")
     print("2. Voir les dépenses")
@@ -28,9 +29,14 @@ while True:
     choix = input("Veuillez choisir une option (1, 2 ou 3) : ")
 
     if choix == "1":
-        print("Ajouter une depense")
+        # print("Ajouter une depense")
+        montant = float(input("Montant de la depense :"))
+        depenses.append(montant)
+        print("Dépense ajoutée !")
     elif choix == "2":
         print("Voir les depenses")
+        for d in depenses:
+            print(d, "€")
     elif choix == "3":
         print("Au revoir !")
         break
